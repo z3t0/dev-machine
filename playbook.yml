@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  tasks:
+          - name: Install git
+            pacman:
+                    name: git
+                    state: present
+
