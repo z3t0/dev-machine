@@ -1,0 +1,32 @@
+---
+- hosts: all
+  become: true
+  tasks:
+          - name: refresh pacman
+            pacman:
+                    update_cache: yes
+
+          - name: Install git
+            pacman:
+                    name: git
+                    state: present
+
+          - name: Install neovim
+            pacman:
+                    name: neovim
+                    state: present
+
+          - name: Install nasm
+            pacman:
+                    name: nasm
+                    state: present
+
+          - name: Install qemu
+            pacman:
+                    name: qemu
+                    state: present
+
+          - name: Install Base Development Packages
+            pacman: 
+                    name: base-devel
+                    state: present
