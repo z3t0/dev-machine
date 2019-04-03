@@ -5,9 +5,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "generic/arch"
 
   # Network
-  Vagrant.configure("2") do |config|
-	  config.vm.network "private_network", ip: "127.0.0.2"
-  end
+  config.vm.network "public_network", bridge: "en0: Wi-Fi (AirPort)"
 
   # Virtual box
   config.vm.provider "virtualbox" do |v|

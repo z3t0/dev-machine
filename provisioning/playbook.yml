@@ -30,3 +30,78 @@
             pacman: 
                     name: base-devel
                     state: present
+
+          - name: Install node
+            pacman: 
+                    name: nodejs
+                    state: present
+
+          - name: Install npm
+            pacman: 
+                    name: npm
+                    state: present
+
+          - name: Install bochs
+            pacman:
+                    name: bochs
+                    state: present
+
+          - name: Install X group
+            pacman:
+                    name: xorg
+                    state: present
+
+
+          - name: Install ruby
+            pacman:
+                    name: ruby
+                    state: present
+
+        # append to profile PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin" 
+        #
+          - name: Install tmux
+            pacman:
+                    name: tmux
+                    state: present
+
+          - name: Install OpenJDK
+            pacman:
+                    name: jdk-openjdk
+                    state: present
+
+          - name: Install time
+            pacman:
+                    name: time
+                    state: present
+
+          - name: Install neofetch
+            pacman:
+                    name: neofetch
+                    state: present
+
+          - name: Install neofetch
+            pacman:
+                    name: neofetch
+                    state: present
+
+        # Install yay aur helper
+        # git clone https://aur.archlinux.org/yay.git
+        # cd yay
+        # makepkg -si
+
+          - git_config:
+                  name: core.editor
+                  scope: global
+                  value: vim
+
+          - git_config:
+                  name: user.email
+                  scope: global
+                  value: 'zetoslab@gmail.com'
+
+          - git_config:
+                  name: user.name
+                  scope: global
+                  value: 'Rafi Khan'
+
+
